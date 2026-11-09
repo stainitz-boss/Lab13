@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #define N 10
 #include <stdio.h>
 #include <locale.h>
@@ -6,7 +6,7 @@
 int main() {
     setlocale(LC_ALL, "RUS");
     float A[N];
-    float originalA[N];
+    float oA[N];
     float temp;
     float sum = 0.0;
 
@@ -15,7 +15,7 @@ int main() {
         printf("a[%d] = ", i + 1);
         scanf("%f", &temp);
         A[i] = temp;
-        originalA[i] = temp;
+        oA[i] = temp;
     }
 
     for (int i = 0; i < N; i++) {
@@ -25,7 +25,7 @@ int main() {
     printf("\n   индекс | исходное значение | новое значение\n");
     printf("   -------------------------------------------\n");
     for (int i = 0; i < N; i++) {
-        printf("   %d      |      %.2f         |      %.2f\n", i, originalA[i], A[i]);
+        printf("   %d      |      %.2f         |      %.2f\n", i, oA[i], A[i]);
     }
 
     for (int i = 0; i < N; i++) {
